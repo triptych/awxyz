@@ -10,6 +10,7 @@ uikitjsicons: /uikit/js/uikit-icons.min.js
 ---
 <!DOCTYPE html>
 <html>
+<div id="triptych" class="uk-container">
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,12 +23,31 @@ uikitjsicons: /uikit/js/uikit-icons.min.js
     {% comment %} <script src="main.js"></script> {% endcomment %}
 </head>
 <body>
-    <h1>{{title}}</h1>
 <!-- <img src="img/parrot.gif" alt="parrot">     -->
-<ul>
+{% comment %} <ul>
 {% for filename in images %}
 <li><a href="img/{{filename}}">{{filename}}</a></li>
 {% endfor %}
+</ul> {% endcomment %}
+<!-- header -->
+<header>
+    <h1>{{title}}</h1>
+</header>
+<!-- header -->
+<!-- main -->
+<h2>Cool Links</h2>
+<ul>
+<li><a href="http://www.twitter.com/triptych">@triptych</a></li>
 </ul>
+<!-- main -->
+<!-- footer -->
+ <footer class="uk-section uk-section-default uk-section-small">
+            <div class="uk-container">
+                <p class="uk-text-small uk-text-center">
+                    Copyright 2019 - Andrew Wooldridge </p>
+            </div>
+        </footer>
+<!-- footer -->
+</div>
 </body>
 </html>
