@@ -6,3 +6,8 @@ tags:
     - nav
 ---
 <h3> Welcome to my website! </h3>
+
+{% set postslist = collections.posts | head(-3) %}
+{% include "postslist.njk" %}
+
+<p> more posts in the archive </p>
