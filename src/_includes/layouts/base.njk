@@ -16,21 +16,51 @@ uikitjsicons: /uikit/js/uikit-icons.min.js
         <script src="{{uikitjsicons}}"></script>
     </head>
     <body>
-    <header>
-        <h1 class="home uk-heading-line uk-text-center"><a href="{{'/' | url}}"> {{title or metadata.title}} </a> </h1>
-    </header>
-    <main class="uk-container">
-        <p>[This is the base.njk]</p>
-        {{ content | safe }}
-    </main>
-    <!-- footer -->
- <footer class="uk-section uk-section-default uk-section-small">
+        <!-- header -->
+        <header>
+            <h1 class="home uk-heading-line uk-text-center">
+                <a href="{{'/' | url}}"> {{title or metadata.title}} </a> 
+            </h1>
+            <!-- navigation -->
+            <nav class="uk-navbar-container" uk-navbar>
+                <div class="uk-navbar-left">
+                    <ul class="uk-navbar-nav">
+                        <li class="uk-active">
+                            <a href="#">Active</a>
+                        </li>
+                        <li class="uk-parent">
+                            <a href="#">Parent</a>
+                            <div class="uk-navbar-dropdown">
+                                <ul class="uk-nav uk-navbar-dropdown-nav">
+                                    <li class="uk-active"><a href="#">Active</a></li>
+                                    <li><a href="#">Item</a></li>
+                                    <li><a href="#">Item</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="">Item</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- navigation -->
+        </header>
+        <!-- header -->
+        <!-- main -->
+        <main class="uk-container">
+            <p>[This is the base.njk]</p>
+            {{ content | safe }}
+        </main>
+        <!-- main -->
+        <!-- footer -->
+        <footer class="uk-section uk-section-default uk-section-small">
             <div class="uk-container">
                 <p class="uk-text-small uk-text-center">
                     Copyright 2019 - Andrew Wooldridge </p>
             </div>
         </footer>
-<!-- footer -->
+        <!-- footer -->
    
     <!-- Current page: {{ page.url | url}} -->
     </body>

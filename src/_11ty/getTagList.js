@@ -1,5 +1,5 @@
 module.exports = function(collection) {
-    console.log("foo")
+    console.log("getTagList.js: collection", collection);
     let tagSet = new Set();
     collection.getAll().forEach(function(item) {
       if( "tags" in item.data ) {
